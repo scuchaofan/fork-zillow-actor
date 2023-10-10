@@ -49,6 +49,7 @@ Apify.main(async () => {
         min: input.minDate,
     });
 
+    log.debug("Key STATE :", Apify.getValue("STATE"));
     const getSimpleResult = getSimpleResultFunction(input);
     const zpidsHandler = await fns.createZpidsHandler(input.maxItems ?? 200);
 
